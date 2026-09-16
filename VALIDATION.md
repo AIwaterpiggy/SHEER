@@ -1,7 +1,52 @@
 # Validation status
 
-Stage-3 local CPU validation, 2026-09-16. This is not a release-readiness,
-real-checkpoint parity or paper-reproduction certificate.
+Local CPU validation and reported server smoke validation, 2026-09-16.
+This is not a release-readiness, real-checkpoint parity or paper-reproduction
+certificate. The sections below distinguish the earlier local checks from
+the later server result.
+
+## Server smoke result (maintainer-provided report)
+
+Both supported settings are **RUN_AND_RESTORATION_PASS** at
+`a1ac0024fd77cce8ad829e33b39d6adf98b47eb2`. Each ran two validation samples
+through the original runner with existing server assets on an RTX 5090:
+
+| Setting | Exit / predictions | Actual restoration | Failures / fallback |
+|---|---|---|---|
+| SAMSum / T5-large / source 6 | 0 / 2 | 6 successful batched flushes; 126 inserted token-layer units | 0 / 0 |
+| Multi-News / LongT5-base / source 3 | 0 / 2 | 38 exact-catchup/restoration flushes; 414 restored/overwritten token-layer units | 0 / 0 |
+
+Both accounting validations passed. Checkpoint/artifact hashes, tokenizer
+identities and all 43 copied source/dependency files matched. Imports came
+from SHEER; no original-repository baseline or additional eight-sample run
+was performed. The runtime, example configs and assets were not modified.
+
+The [sanitized server record](docs/SERVER_VALIDATION_2026-09-16.md) records
+the supplied report's environment, counters, scope and remaining gates.
+This documentation update did not access the server or independently inspect
+its raw logs. Existing-cache success does not establish fresh-install
+portability, full-model parity, paper quality or performance.
+
+### Local checks for the documentation reconciliation
+
+Only six documentation/inventory files were updated and the sanitized server
+record was added. No source, example config, dependency list, checksum file
+or artifact bytes changed. Focused local checks passed:
+
+- 11 existing publication-packaging tests (same cases, not new runtime cases).
+- Complete runner import, both JSON/production-bootstrap checks and loading
+  the real included Multi-News artifact through the original manager.
+- All 43 manifest source/dependency hashes and 42 Python AST checks.
+- Frozen checkpoint/artifact/tokenizer identities and method fields retained;
+  SAMSum remains absent locally with no invented public download URL.
+- JSON and local Markdown links, scoped personal-path/credential checks,
+  and `git diff --check`.
+- All six server-guide Bash command blocks are unchanged from the tested
+  commit and pass `bash -n`; the three embedded Python blocks parse.
+
+No GPU/model generation or download was performed during this documentation
+update. The previously recorded 141 runtime cases were not rerun for these
+documentation-only changes. Local focused evidence remains Git-ignored.
 
 ## Environment and source identity
 
@@ -60,9 +105,10 @@ The **real Multi-News artifact**, 724,249 bytes, retains SHA-256
 - calibration layer/runtime scope matches: true;
 - runtime compatible: true; use classification `fixed_layer_runtime`.
 
-SAMSum's artifact remains missing; no replacement was supplied. Neither
-real distilled checkpoint exists in the expected local directories. Thus
-no real-model construction, generation or quality measurement was possible.
+At this local CPU stage, SAMSum's artifact was missing; no replacement was
+supplied. Neither real distilled checkpoint existed in the expected local
+directories. No real-model construction, generation or quality measurement
+was performed locally. The later server result is recorded separately above.
 
 ## Existing synthetic runtime tests
 
@@ -141,7 +187,9 @@ These helpers/reports and all environments/caches are Git-ignored.
   and `tokenizer.json`). Its full identity does **not** match archived
   `b6c8d1bf050fb14efe4b02a4c4a658728b89d059132d671bbf0cade5b3af275f`.
   No tokenizer normalization, alternate identity rule or config correction
-  was introduced. This remains an explicit release gate.
+  was introduced. The later server check matched the archive using the
+  existing cached `t5-large` identifier; it does not establish equivalence
+  of this local-directory probe. Fresh-environment preparation remains open.
 
 ## Stage-4 publication preparation
 
@@ -179,7 +227,8 @@ Stage-4 local checks passed:
   all 42 source files pass AST checks. Reconstructing each prior JSON by
   restoring only the old per-sample path reproduces its stage-start SHA-256.
 - All five Bash blocks pass `bash -n`; all three embedded Python blocks parse.
-  The preflight and GPU runner have **not** been executed on the server.
+  At this stage the preflight and GPU runner had not yet been executed on
+  the server; the later reported result is recorded above.
 - The publication candidate list has exactly 60 reviewed files: 43 unchanged
   source/dependency files and 17 packaging/artifact files. No environment,
   cache, output, local fixture, checkpoint or private Git history is included.
@@ -216,22 +265,20 @@ The resources are downloaded to ignored local caches; they are not distributed
 in Git. Do not install the unbounded original requirements over these pins or
 use this environment for the CUDA-targeted example runs.
 
-## Next checks on the existing server
+## Remaining publication checks
 
-1. Locate and verify the genuine SAMSum artifact; provide it or a verified
-   public access link without refitting.
-2. Verify the existing FREE checkpoint bytes in place and resolve SAMSum
-   tokenizer preparation/identity. Do not download large weights to the PC.
-3. Use the accepted server CUDA interpreter and cached datasets/resources for
-   the two small smoke checks; keep outputs separate and inspect restoration
-   coverage. Fresh-install Linux dependency locking is a separate uncompleted
-   portability check, not a reason to rebuild a working server environment.
-4. If needed, compare the same small run against the original checkout under
-   that environment. This is not a full paper rerun or performance measurement.
-5. Complete the rights/metadata and availability review in `PROVENANCE.md`
-   before declaring a final paper release. The user-authorized handoff branch
-   is `work/compact-free-extraction`; its push is separate from those pending
-   release checks. Use `git rev-parse HEAD` to record the server-tested commit.
+1. Supply the server-verified genuine SAMSum artifact or a verified public
+   link after distribution/metadata review. Do not refit or resave it.
+2. Finalize a reproducible tokenizer preparation recipe, especially for
+   SAMSum. Its accepted cached identifier is verified; a newly prepared
+   local directory is not. Keep the existing identity checks fail-closed.
+3. Confirm reader-facing checkpoint access and document environment limits.
+   Existing server checkpoint hashes are verified; fresh public downloads
+   and a fresh Linux/CUDA installation were not tested. Do not rebuild the
+   working server environment or download large weights to the PC for this.
+4. Complete the rights/metadata review in `PROVENANCE.md` before a release
+   tag or `main` promotion. No further model run is required for the bounded
+   smoke task, and no original-checkout parity claim is made.
 
 Do not claim paper-quality reproduction, latency/speedup, full-checkpoint CPU
 support, LongT5 direct insertion or release readiness from these checks.

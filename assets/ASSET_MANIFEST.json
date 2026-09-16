@@ -1,13 +1,26 @@
 {
   "schema_version": 1,
-  "status": "local_stage3_cpu_checked_not_release_validated",
+  "status": "server_smoke_pass_reported_public_release_incomplete",
+  "server_validation": {
+    "evidence_kind": "maintainer_provided_report; raw server logs not independently inspected during this documentation update",
+    "report_created_at": "2026-09-16T08:44:03.482189+00:00",
+    "tested_commit": "a1ac0024fd77cce8ad829e33b39d6adf98b47eb2",
+    "record": "docs/SERVER_VALIDATION_2026-09-16.md",
+    "samples_per_setting": 2,
+    "samsum_status": "RUN_AND_RESTORATION_PASS",
+    "multinews_status": "RUN_AND_RESTORATION_PASS",
+    "scope": "Existing offline server assets and environment; not fresh-install validation, output parity, full paper reproduction or performance evidence."
+  },
   "format": "Original .pt artifacts; no tensor conversion, refitting or metadata rewriting.",
   "verification": "Check the selected .sha256 file before loading. Fixed-layer generation does not universally enforce the configured file SHA.",
   "samsum": {
     "artifact": {
       "path": "assets/native_free_source6_population_matched_phase3c_candidate.pt",
       "sha256": "8a0a2b7cc1c450673938081d8f02604bbfe4b478926358be0c202add36d357e9",
-      "status": "missing_not_substituted"
+      "bytes": 1919017,
+      "status": "not_bundled; server_size_and_sha256_match_reported; public_access_pending",
+      "public_download_url": null,
+      "size_provenance": "Observed in the maintainer-provided server report; the file was not transferred to this package."
     },
     "checkpoint": {
       "directory": "checkpoints/samsum_t5_large_shallowdeep_kd_dyna",
@@ -28,7 +41,12 @@
       "directory": "tokenizers/samsum",
       "recorded_identifier": "t5-large",
       "immutable_revision": null,
-      "status": "not_bundled; local snapshot probe differs from archived identity",
+      "status": "not_bundled; server_cached_identifier_identity_match_reported; fresh_preparation_unverified",
+      "server_cached_identifier": "t5-large",
+      "server_observed_cache_main_revision": "150ebc2c4b72291e770f58e6057481c8d2ed331a",
+      "server_identity_sha256": "b6c8d1bf050fb14efe4b02a4c4a658728b89d059132d671bbf0cade5b3af275f",
+      "server_model_max_length": 512,
+      "server_note": "Existing cached identifier loaded with use_fast=True and local_files_only=True, with no overrides. Observed cache ref does not validate a newly prepared directory or change the unknown original immutable_revision.",
       "probe_revision": "150ebc2c4b72291e770f58e6057481c8d2ed331a",
       "probe_identifier": "google-t5/t5-large",
       "archived_identity_sha256": "b6c8d1bf050fb14efe4b02a4c4a658728b89d059132d671bbf0cade5b3af275f",
@@ -39,7 +57,8 @@
       "name": "knkarthick/samsum",
       "split": "validation",
       "revision": null,
-      "notes": "Inherited loader; no immutable dataset revision was added. Stage 3 builder and one streamed validation sample passed; full non-streaming preparation and historical population identity remain unverified."
+      "server_cached_validation_rows": 818,
+      "notes": "Inherited loader; no immutable dataset revision was added. Local builder/streaming checks passed. Server report records two-sample generation from the existing offline non-streaming cache; fresh data preparation and historical population identity remain unverified."
     },
     "source_depth": 6,
     "missing_targets": [
@@ -82,7 +101,7 @@
       "directory": "tokenizers/multinews",
       "recorded_identifier": "google/long-t5-tglobal-base",
       "immutable_revision": "5093e24fd41835bd08e5817c58d55f060430c478",
-      "status": "not_bundled; ignored snapshot probe matches archived identity in stage-3 CPU environment",
+      "status": "not_bundled; local snapshot identity matched; server_local_directory_identity_match_reported",
       "identity_sha256": "9d15ad27c161d5afad54065a7b0557de3a8850994efaf070a2d0e57a535e58cf",
       "probe_note": "AutoTokenizer local_files_only/use_fast load, original tokenizer_identity comparison and one synthetic encode passed. Not staged in tokenizers/multinews."
     },
@@ -90,7 +109,8 @@
       "name": "multi_news",
       "split": "validation",
       "revision": null,
-      "notes": "Keep the original bare multi_news dispatch name and null config. Stage 3 builder and one streamed validation sample passed. Full non-streaming preparation (builder reports 756785627 download bytes) and historical population identity remain unverified."
+      "server_cached_validation_rows": 5622,
+      "notes": "Keep the original bare multi_news dispatch name and null config. Local builder/streaming checks passed. Server report records two-sample generation from the existing offline non-streaming cache. Fresh data preparation (local builder reports 756785627 download bytes) and historical population identity remain unverified."
     },
     "source_depth": 3,
     "missing_targets": [

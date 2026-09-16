@@ -2,9 +2,13 @@
 
 Purpose: check that the compact extraction can use the **existing** server
 assets for the two supported settings. This is not a benchmark, refit, training
-run or repeat of the paper experiments. These commands have not been run on
-the server by this work; local syntax/fixture checks are recorded in
-[VALIDATION.md](../VALIDATION.md).
+run or repeat of the paper experiments. The maintainer-provided
+[2026-09-16 server record](SERVER_VALIDATION_2026-09-16.md) reports successful
+generation and restoration for both settings at
+`a1ac0024fd77cce8ad829e33b39d6adf98b47eb2`, with two samples each. This guide
+remains a procedure for future checks; that result applies to the recorded
+snapshot, environment and existing assets, not every future clone.
+Local syntax/fixture checks are recorded in [VALIDATION.md](../VALIDATION.md).
 
 ## 1. Use a separate SHEER directory and the existing environment
 
@@ -115,7 +119,8 @@ For SAMSum, compare against the accepted server run's tokenizer record: the
 full digest includes the asset inventory as well as semantic settings. A
 cache filename/layout difference alone does not prove tokenization changed,
 but do not silently dismiss semantic differences or rewrite the expected hash.
-Finalize a reproducible preparation recipe before calling that setting verified.
+The reported server SAMSum check matched with cached `t5-large`. Finalize a
+reproducible preparation recipe before claiming fresh-environment portability.
 
 ## 3. Generate a fresh two-sample config
 

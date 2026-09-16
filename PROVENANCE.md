@@ -24,8 +24,10 @@ checkout's filesystem location.
 Package initializers and the existing runner/models import diagnostic,
 provenance, training and other experiment support modules. Their presence
 does not expand the supported settings. Stage 3 verified complete-runner
-imports in an isolated Windows CPU environment. Real-checkpoint execution
-is still pending.
+imports in an isolated Windows CPU environment. The later maintainer-provided
+[server report](docs/SERVER_VALIDATION_2026-09-16.md) records real-checkpoint
+generation and restoration for both settings at
+`a1ac0024fd77cce8ad829e33b39d6adf98b47eb2` (two samples each).
 
 The disabled calibration compatibility probe imports fitting scripts that
 are deliberately absent. Unsupported collection/fitting modes are not
@@ -51,9 +53,11 @@ metadata rewriting was performed.
 Embedded server-path metadata remains and needs disclosure review before
 public release.
 
-SAMSum is missing. Its required identity comes from the archived schema-v2
-corrective preflight, but bytes cannot be reconstructed from the digest.
-No preliminary artifact or synthetic replacement is supplied.
+SAMSum is not bundled and has no verified public download link. The server
+report verifies the genuine file against the archived schema-v2 corrective
+SHA-256 and reports 1,919,017 bytes. This documentation update did not obtain
+that file; bytes cannot be reconstructed from a digest. No preliminary
+artifact or synthetic replacement is supplied.
 
 Checkpoint identities come from the archived SAMSum schema-v2 corrective
 inventory and LongT5 N128 final quality inventory. Weights are not bundled.
@@ -65,7 +69,8 @@ replay then overwrite. Both retain the original `AdditionalArguments` and
 `update_autoconfig` bootstrap. No LongT5 direct-insertion port was made.
 
 Latest-source byte identity does not establish parity with an older paper
-execution point; the extracted package needs its own validation.
+execution point. The extracted package's bounded server smoke now has
+reported restoration coverage; original-checkout parity was not tested.
 
 ## Stage-4 packaging correction
 
@@ -87,7 +92,8 @@ Publish only the reviewed files:
   `SOURCE_MANIFEST.json`, `.gitignore`, `.gitattributes`.
 - The two `configs/free_*.json` examples and two CPU validation requirements
   files (explicitly not a Linux/CUDA install lock).
-- `docs/ASSETS.md`, `docs/SERVER_SMOKE.md`, `assets/ASSET_MANIFEST.json`,
+- `docs/ASSETS.md`, `docs/SERVER_SMOKE.md`,
+  `docs/SERVER_VALIDATION_2026-09-16.md`, `assets/ASSET_MANIFEST.json`,
   the two checksum files and approved original restoration artifacts only.
 
 Do not publish local environments/caches, `.validation` fixtures/reports,
@@ -99,15 +105,18 @@ review; inspect the final Git file list and diff before staging.
 
 Before advertising a runnable two-setting release:
 
-- [ ] Confirm the exact FREE checkpoint access instructions and hashes using
-  existing server assets; no local-PC checkpoint download is required.
-- [ ] Supply the genuine SAMSum artifact or a verified public link to it,
-  and finalize the tokenizer preparation recipe from the accepted server run.
-- [ ] Run the bounded server checks in `docs/SERVER_SMOKE.md`; record each
-  setting's actual result and whether restoration was exercised.
+- [x] Verify checkpoint/artifact hashes and both tokenizer identities using
+  existing server assets (maintainer-provided report, 2026-09-16).
+- [ ] Confirm that reader-facing checkpoint acquisition is reproducible;
+  the server used existing files, not fresh downloads.
+- [ ] Supply the genuine SAMSum artifact or a verified public link to it.
+- [ ] Finalize fresh-environment tokenizer preparation; the accepted cached
+  SAMSum load does not validate arbitrary local-directory snapshots.
+- [x] Run the bounded server checks and record actual restoration coverage:
+  both settings reported `RUN_AND_RESTORATION_PASS`, two samples each.
 - [ ] Resolve third-party redistribution questions and review embedded
   artifact metadata. Do not silently strip metadata and change frozen hashes.
-- [x] Review the 60-file snapshot for the user-authorized server handoff on
+- [x] Review the initial 60-file snapshot for the user-authorized server handoff on
   `work/compact-free-extraction`. No source rewriting, private history,
   checkpoint bundles or generated outputs are included.
 - [ ] After server validation and the remaining release review, select a
@@ -118,10 +127,13 @@ Artifact access, clear scope and accurate availability claims are distinct
 from the server smoke check. No full paper rerun is part of this checklist.
 
 The user authorized commit/push of the server-validation snapshot on
-2026-09-16. This handoff does not assert completed server tests or resolve the
-third-party notices by assigning a new license. The original Multi-News
-artifact's recorded path metadata remains unchanged; no credentials or model
-weights are added. The branch is explicitly not the final paper release.
+2026-09-16. The subsequent server report is summarized in one added public
+document, without personal paths or raw generation outputs; the publication
+file set is now 61 files. Documentation/inventory updates do not change the
+43 copied files, configs or artifact bytes, or confer redistribution rights.
+The original Multi-News artifact's recorded path metadata remains unchanged;
+no credentials or model weights are added. The branch is not the final paper
+release, and the report does not replace the remaining availability review.
 
 ### Availability statement draft
 

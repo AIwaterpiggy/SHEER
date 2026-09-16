@@ -27,13 +27,18 @@ cd SHEER-server-check
 git rev-parse HEAD
 ```
 
-Local CPU imports and 141 existing synthetic runtime tests pass. Server
-checks of this extracted package are pending; these checks do not require
-bringing large checkpoints onto a local PC.
+Local CPU imports and 141 existing synthetic runtime tests pass. The
+maintainer-provided server report records **RUN_AND_RESTORATION_PASS** for
+both settings at `a1ac0024fd77cce8ad829e33b39d6adf98b47eb2`: two samples each,
+with actual restoration and no failures or fallback. See the
+[2026-09-16 server validation record](docs/SERVER_VALIDATION_2026-09-16.md).
+This is a bounded smoke result, not full paper reproduction or a speed claim.
 
 The original Multi-News restoration artifact is included in `assets/`. The
-SAMSum artifact has not yet been supplied to this package and has no verified
-public download link. SAMSum tokenizer preparation also needs confirmation.
+SAMSum artifact was verified on the server but has not yet been supplied to
+this package and has no verified public download link. The server's cached
+SAMSum tokenizer matches the archived identity; fresh-environment preparation
+is still unverified. Redistribution/metadata review also remains open.
 **The two-setting release is not yet ready to advertise as fully runnable.**
 
 ## 1. Environment
@@ -55,7 +60,8 @@ See [Asset sources and checksums](docs/ASSETS.md) for:
 
 - public dataset links and the exact FREE distilled checkpoint names;
 - checkpoint/artifact SHA-256 inventories and expected directory layout;
-- tokenizer identities and the unresolved SAMSum preparation check.
+- tokenizer identities, the accepted cached SAMSum load, and remaining
+  fresh-environment preparation checks.
 
 Do not substitute plain pretrained T5/LongT5, `weighted_ce` checkpoints or
 preliminary restoration artifacts. Existing server assets can be used in
