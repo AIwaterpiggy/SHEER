@@ -1,0 +1,15 @@
+# Preserve exact bytes of the copied research source, including line endings.
+/models/** -text
+/our_kv_restoration/** -text
+/sum_lib/** -text
+/util/** -text
+/run_summarization.py -text
+/requirements.txt -text
+/requirements-cpu-validation.in text eol=lf
+/requirements-windows-cpu.lock.txt text eol=lf
+/assets/*.pt binary
+*.md text eol=lf
+*.json text eol=lf
+*.sha256 text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf

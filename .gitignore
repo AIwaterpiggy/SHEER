@@ -1,0 +1,26 @@
+/.venv/
+/venv/
+/.cache/
+/.validation/
+/checkpoints/
+/tokenizers/
+/data/
+/outputs/
+/logs/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.lock
+.env
+.env.*
+# Do not accidentally publish model weights, dumps, archives or runtime logs.
+*.bin
+*.safetensors
+*.pt
+!/assets/longt5_multinews_source3_phase3c_n128.pt
+!/assets/native_free_source6_population_matched_phase3c_candidate.pt
+*.npz
+*.tar
+*.tar.gz
+*.zip
+*.log

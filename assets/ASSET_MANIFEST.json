@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "status": "local_stage3_cpu_checked_not_release_validated",
+  "format": "Original .pt artifacts; no tensor conversion, refitting or metadata rewriting.",
+  "verification": "Check the selected .sha256 file before loading. Fixed-layer generation does not universally enforce the configured file SHA.",
+  "samsum": {
+    "artifact": {
+      "path": "assets/native_free_source6_population_matched_phase3c_candidate.pt",
+      "sha256": "8a0a2b7cc1c450673938081d8f02604bbfe4b478926358be0c202add36d357e9",
+      "status": "missing_not_substituted"
+    },
+    "checkpoint": {
+      "directory": "checkpoints/samsum_t5_large_shallowdeep_kd_dyna",
+      "files": [
+        {
+          "path": "config.json",
+          "bytes": 2100,
+          "sha256": "3a4473418be234612fc8aad5a9f6067ba15b0bc410d01ce4ce09567ce90f992f"
+        },
+        {
+          "path": "pytorch_model.bin",
+          "bytes": 2950857217,
+          "sha256": "9266084a32c8c8e9f55b683c3a60f0122be1010fe8c7dff8d17baa1523d521ba"
+        }
+      ]
+    },
+    "tokenizer": {
+      "directory": "tokenizers/samsum",
+      "recorded_identifier": "t5-large",
+      "immutable_revision": null,
+      "status": "not_bundled; local snapshot probe differs from archived identity",
+      "probe_revision": "150ebc2c4b72291e770f58e6057481c8d2ed331a",
+      "probe_identifier": "google-t5/t5-large",
+      "archived_identity_sha256": "b6c8d1bf050fb14efe4b02a4c4a658728b89d059132d671bbf0cade5b3af275f",
+      "probe_identity_sha256": "9d15ad27c161d5afad54065a7b0557de3a8850994efaf070a2d0e57a535e58cf",
+      "probe_note": "Local load and encode passed. Archived behavior_config includes model_max_length=512; probe behavior_config omits it. Asset inventories also differ. No correction or identity-equivalence claim made."
+    },
+    "dataset": {
+      "name": "knkarthick/samsum",
+      "split": "validation",
+      "revision": null,
+      "notes": "Inherited loader; no immutable dataset revision was added. Stage 3 builder and one streamed validation sample passed; full non-streaming preparation and historical population identity remain unverified."
+    },
+    "source_depth": 6,
+    "missing_targets": [
+      6,
+      23
+    ],
+    "learned_targets": [
+      7,
+      23
+    ],
+    "mode": "native_free_batched_task_c2"
+  },
+  "multinews": {
+    "artifact": {
+      "path": "assets/longt5_multinews_source3_phase3c_n128.pt",
+      "bytes": 724249,
+      "sha256": "d9cdb61aaf069b9fe76eef4fe546fdaaa3239f0f553af029b2b2e4d4797f7014",
+      "status": "present_original_bytes_sha256_verified_runtime_loader_passed",
+      "source_archive": "LONGT5_MULTINEWS_FINAL_PAPER_FACING_LEAN_PLUS_FINAL_REPACK_20260827T025931Z.tar.gz",
+      "source_archive_sha256": "58e53aad59357a8372d9cb1015934ee703fdde9d38850197564dad242239641f",
+      "member": "LONGT5_MULTINEWS_FINAL_PAPER_FACING_LEAN_PLUS_FINAL_REPACK_20260827T025931Z/05_ARTIFACT/longt5_multinews_source3_phase3c_n128.pt",
+      "metadata_note": "Original embedded server-path metadata is preserved; disclosure review is required before publication."
+    },
+    "checkpoint": {
+      "directory": "checkpoints/multi_news_longt5_base_shallowdeep_kd_dyna",
+      "files": [
+        {
+          "path": "config.json",
+          "bytes": 1552,
+          "sha256": "4f291aec03e6802cfa706b94f02b9a85f18d609748d5f2ad2971347712ed0900"
+        },
+        {
+          "path": "pytorch_model.bin",
+          "bytes": 990452905,
+          "sha256": "bee5fbcbdff018f4f2eb9226db55dfdd9c8a3b4b87a8e69f3a4a341ba0415e03"
+        }
+      ]
+    },
+    "tokenizer": {
+      "directory": "tokenizers/multinews",
+      "recorded_identifier": "google/long-t5-tglobal-base",
+      "immutable_revision": "5093e24fd41835bd08e5817c58d55f060430c478",
+      "status": "not_bundled; ignored snapshot probe matches archived identity in stage-3 CPU environment",
+      "identity_sha256": "9d15ad27c161d5afad54065a7b0557de3a8850994efaf070a2d0e57a535e58cf",
+      "probe_note": "AutoTokenizer local_files_only/use_fast load, original tokenizer_identity comparison and one synthetic encode passed. Not staged in tokenizers/multinews."
+    },
+    "dataset": {
+      "name": "multi_news",
+      "split": "validation",
+      "revision": null,
+      "notes": "Keep the original bare multi_news dispatch name and null config. Stage 3 builder and one streamed validation sample passed. Full non-streaming preparation (builder reports 756785627 download bytes) and historical population identity remain unverified."
+    },
+    "source_depth": 3,
+    "missing_targets": [
+      3,
+      11
+    ],
+    "learned_targets": [
+      4,
+      11
+    ],
+    "mode": "native_free_task_c1_exact_replay_then_overwrite"
+  }
+}

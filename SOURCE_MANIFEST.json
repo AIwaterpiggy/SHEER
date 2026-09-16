@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "source_repository": "https://github.com/AIwaterpiggy/MoE_EarlyExit_KVcache",
+  "source_branch": "dev/selective-kv-restoration",
+  "source_commit": "860e12ea29dd86f98709a2381c9f372c337fcce6",
+  "sheer_starting_commit": "e3ede7e5100b66d74cc68c6067a7ea0e3304e990",
+  "copy_policy": "Whole files, original checked-out bytes; no edits. Attributes preserve source line endings.",
+  "python_file_count": 42,
+  "entry_point": "run_summarization.py",
+  "files": [
+    {
+      "path": "models/__init__.py",
+      "bytes": 310,
+      "sha256": "b9fc8d563b455e735f8c99f184c8403dc080185aa1ccd2b9efc7edaefa1eeb3a"
+    },
+    {
+      "path": "models/deploying_longt5.py",
+      "bytes": 136493,
+      "sha256": "aa3931746f3b54ebc13b5d4f54961edf69d01bcd7005334b519845dfee10ad12"
+    },
+    {
+      "path": "models/deploying_t5.py",
+      "bytes": 665402,
+      "sha256": "c583e069bf89c1f01195e432d8c105e2c5335db477fbb604f82476f76580e536"
+    },
+    {
+      "path": "models/modeling_longt5.py",
+      "bytes": 35783,
+      "sha256": "85719474fe19b6e0356005ad9f0a90e06abbcea88ad13f6dcfe98d0e2da3c7e9"
+    },
+    {
+      "path": "models/modeling_t5.py",
+      "bytes": 46790,
+      "sha256": "506bdf01e1ed85b345136fd27e05c7eb85dbe85c055ecac5ccb5ff85202158d8"
+    },
+    {
+      "path": "our_kv_restoration/__init__.py",
+      "bytes": 2471,
+      "sha256": "7e40fc36e85a21076ad1bc4a01dc5f4dfcce0fd526a1e4584182d78c3138d61f"
+    },
+    {
+      "path": "our_kv_restoration/cnndm_source6_population_contract.py",
+      "bytes": 15206,
+      "sha256": "b128622ff13f44f340703a8bd9cd169832e02527feb0299956cf200576556c3a"
+    },
+    {
+      "path": "our_kv_restoration/early_exit_exact_cache_calibration.py",
+      "bytes": 107613,
+      "sha256": "d92fb230f1be84d388a83d2771234ed7313186ef9b7107ed80ae337b5e8f6994"
+    },
+    {
+      "path": "our_kv_restoration/exact_recompute_plan.py",
+      "bytes": 5354,
+      "sha256": "e09fd042b928613216a0a8e125ea71c4eb8e001a706f16dd133033bf8efd5b40"
+    },
+    {
+      "path": "our_kv_restoration/exact_recompute_verify.py",
+      "bytes": 3112,
+      "sha256": "fc5fd7afebc822bad0d47e589ef8f6f855e583323aadd2745b98c151870d1cc0"
+    },
+    {
+      "path": "our_kv_restoration/f2a_frozen_schedule.py",
+      "bytes": 129779,
+      "sha256": "25689a355fb38dbe9b200d2e960d88d692a33507b161be3d2b72cbc590aa857e"
+    },
+    {
+      "path": "our_kv_restoration/f2b_free_running.py",
+      "bytes": 80243,
+      "sha256": "3ea7e4b104279460a8ae87cc9fe903d6cc02672207b4038eb94598be55c5ea27"
+    },
+    {
+      "path": "our_kv_restoration/h2o_importance.py",
+      "bytes": 5496,
+      "sha256": "a467d54eec47ded02bd99c6001efaf4c2c11fc44ab085fe781f80e90d8fadbe4"
+    },
+    {
+      "path": "our_kv_restoration/h2o_mask_plan.py",
+      "bytes": 5072,
+      "sha256": "b57e342f46d17fa0c1a085ab5a704f980afbf90a9101588c9a2a6196db2227e0"
+    },
+    {
+      "path": "our_kv_restoration/h2o_masking.py",
+      "bytes": 3158,
+      "sha256": "2ec9836900d02705fd364c5d82510620b4fc7732599eb70b4a2a3b83aae0b1bb"
+    },
+    {
+      "path": "our_kv_restoration/kv_trace.py",
+      "bytes": 4231,
+      "sha256": "e4dc61420b1a34c8c9bdf3c3ccdf75c0c39dd1fff0089d9362a6738d0b8c13da"
+    },
+    {
+      "path": "our_kv_restoration/missing_kv_calm_trace.py",
+      "bytes": 44064,
+      "sha256": "9d8f524ed9de1878be303b6dc432ed238f6f552fd0692520ace6ce5d0ef5b8db"
+    },
+    {
+      "path": "our_kv_restoration/missing_kv_dump_provenance.py",
+      "bytes": 88106,
+      "sha256": "fc02c03601db1f85e3d57ac47238181a8028e38e3a8bd4f1daff2eb507f94a49"
+    },
+    {
+      "path": "our_kv_restoration/missing_kv_exact_catchup_overhead.py",
+      "bytes": 80298,
+      "sha256": "0987e5f44221bda1e3311bd084f64530e556a26219e43b40d34d954b6b141332"
+    },
+    {
+      "path": "our_kv_restoration/missing_kv_fitting_provenance.py",
+      "bytes": 179872,
+      "sha256": "19fd8a7e80cc22720fe12fbfce5298ec1baf896939016c63703ae991efe9bfac"
+    },
+    {
+      "path": "our_kv_restoration/missing_kv_paper_population.py",
+      "bytes": 76375,
+      "sha256": "8ee9e03f0e9b90b498f6830a5bf7807b440969e69795137791935be13b4ea82a"
+    },
+    {
+      "path": "our_kv_restoration/missing_kv_paper_statistics.py",
+      "bytes": 95246,
+      "sha256": "aa23b323f2ae24afd318a649ab182dd8a8ea887ccc1d905f8a6101a1aeff13ae"
+    },
+    {
+      "path": "our_kv_restoration/missing_kv_review_bundle.py",
+      "bytes": 15959,
+      "sha256": "754ccf252353591d9915cb0eff21ba2cc47e93d13992a96d65da50ff78171fef"
+    },
+    {
+      "path": "our_kv_restoration/missing_kv_runtime_accounting.py",
+      "bytes": 61051,
+      "sha256": "9ec8bdd19411d43fc426127766e7150975aadfca6d8da47d96c50b9dee792a9f"
+    },
+    {
+      "path": "our_kv_restoration/multinews_source3_population_contract.py",
+      "bytes": 20109,
+      "sha256": "a67a89d4a47397146013662ff61c2ec1e9f25bc35f8ae440067a7f8a3267674c"
+    },
+    {
+      "path": "our_kv_restoration/phase3c_fitting_evidence_roles.py",
+      "bytes": 188730,
+      "sha256": "793fdd185370397bbe220adb6e1e2a75be37946e5fdff98c57cfae1dc749d70d"
+    },
+    {
+      "path": "our_kv_restoration/phase3c_policy_artifact.py",
+      "bytes": 130321,
+      "sha256": "8328ed892a66e981b8a72a38e29a259c93ad72ee6c5b51d6695e8de5b0ad0d24"
+    },
+    {
+      "path": "our_kv_restoration/position_bookkeeping.py",
+      "bytes": 3427,
+      "sha256": "c08c7dc3b2ff466c7766fb9e282da9723dc50fde0d2d9d8a43f76ce51aab44cc"
+    },
+    {
+      "path": "our_kv_restoration/runtime_kv_restoration.py",
+      "bytes": 119760,
+      "sha256": "6e6a5ed3c9c58a57510b6e34da8304c8fac958e2c8bfd6767c73fd82fcab8560"
+    },
+    {
+      "path": "our_kv_restoration/selection_policy.py",
+      "bytes": 6553,
+      "sha256": "a9d136f65612092fc7756258f5c46894a63c34673847d5d3cdf02e47b446898e"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 224,
+      "sha256": "7c7854c3649d027d3f5fec19dfa1139de02731409f389bb97420d5cac0856270"
+    },
+    {
+      "path": "run_summarization.py",
+      "bytes": 94975,
+      "sha256": "ac539bbb049632847dc9ffbeff13d77bbaf60a025200a29aa9dc5ded0c83a8c5"
+    },
+    {
+      "path": "sum_lib/__init__.py",
+      "bytes": 178,
+      "sha256": "16dc8c08200716c854b2b712f15c409848f664b7008ce334e973a6e399e2bca3"
+    },
+    {
+      "path": "sum_lib/datatraining_args.py",
+      "bytes": 6702,
+      "sha256": "9767cdf575e07a0826711f9b212b328c787e32b70bcd9e3862edc621552c0b71"
+    },
+    {
+      "path": "sum_lib/model_args.py",
+      "bytes": 1816,
+      "sha256": "7a8bc992b0dce472d5f75a6151299c8d86233e5f25b15d7d2db0bffdd41b222a"
+    },
+    {
+      "path": "sum_lib/trainer_sum.py",
+      "bytes": 62034,
+      "sha256": "7851bca17ee39133f5201591a2d018d00dff09f333039f9472d951d52761f941"
+    },
+    {
+      "path": "sum_lib/training_args.py",
+      "bytes": 967,
+      "sha256": "8adeee096d3d20b8f35fefdfe74e218c5f9b88fddcf21cd61ab10804d6d5ab36"
+    },
+    {
+      "path": "util/__init__.py",
+      "bytes": 455,
+      "sha256": "afa9de50ad8dd68ef731e203666f983e78124303371837d71a3778d9b262a718"
+    },
+    {
+      "path": "util/additional_args.py",
+      "bytes": 113450,
+      "sha256": "a12021f3da259daa844ebf3c3c8325a19736c7e59bbcc537e6b996da43141f61"
+    },
+    {
+      "path": "util/bmm.py",
+      "bytes": 4424,
+      "sha256": "83021722ad831d04dad06b2aa7555206323d7039895b4066b891acc7dd24e4f2"
+    },
+    {
+      "path": "util/losses.py",
+      "bytes": 8491,
+      "sha256": "66313034710fead582d94f17d79ab4e511d62e45fc8253a1728905633800224a"
+    },
+    {
+      "path": "util/mask_ops.py",
+      "bytes": 1759,
+      "sha256": "723a09b98203dcf8fc735a83c9f02b24fbe59702a6e5398308716b2fdbbb04e9"
+    },
+    {
+      "path": "util/skip_conf.py",
+      "bytes": 3338,
+      "sha256": "6298a9f9491a8e21cd6fb5a86e62a632abc6f6f37bc089a652abe9d61309f80b"
+    }
+  ]
+}
