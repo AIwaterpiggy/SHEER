@@ -53,11 +53,21 @@ metadata rewriting was performed.
 Embedded server-path metadata remains and needs disclosure review before
 public release.
 
-SAMSum is not bundled and has no verified public download link. The server
-report verifies the genuine file against the archived schema-v2 corrective
-SHA-256 and reports 1,919,017 bytes. This documentation update did not obtain
-that file; bytes cannot be reconstructed from a digest. No preliminary
-artifact or synthetic replacement is supplied.
+SAMSum is now included from the user-supplied original file. Its 1,919,017
+bytes match the archived and server-verified SHA-256
+`8a0a2b7cc1c450673938081d8f02604bbfe4b478926358be0c202add36d357e9`.
+The file was copied without resaving, conversion, refitting or metadata edits.
+The unchanged schema validator and runtime manager accept it as fixed source
+6 at threshold 0.9; no preliminary-source or Official CALM override is used.
+
+SAMSum's `model_spec.model_name_or_path` and
+`provenance.validated_model_tokenizer_identity.model_name_or_path` retain
+the same historical absolute server path. The limited metadata scan found
+no tested credential-token/private-key patterns. These path fields are
+preserved to retain the frozen hash; their presence is disclosed here, not
+silently stripped. This is not comprehensive security or rights clearance.
+Neither restoration artifact is an evaluation-results bundle or a complete
+FREE model checkpoint.
 
 Checkpoint identities come from the archived SAMSum schema-v2 corrective
 inventory and LongT5 N128 final quality inventory. Weights are not bundled.
@@ -109,7 +119,8 @@ Before advertising a runnable two-setting release:
   existing server assets (maintainer-provided report, 2026-09-16).
 - [ ] Confirm that reader-facing checkpoint acquisition is reproducible;
   the server used existing files, not fresh downloads.
-- [ ] Supply the genuine SAMSum artifact or a verified public link to it.
+- [x] Supply the genuine SAMSum artifact: the exact original is included
+  under `assets/`, with local byte/hash/schema/runtime-loader checks.
 - [ ] Finalize fresh-environment tokenizer preparation; the accepted cached
   SAMSum load does not validate arbitrary local-directory snapshots.
 - [x] Run the bounded server checks and record actual restoration coverage:
@@ -129,8 +140,9 @@ from the server smoke check. No full paper rerun is part of this checklist.
 The user authorized commit/push of the server-validation snapshot on
 2026-09-16. The subsequent server report is summarized in one added public
 document, without personal paths or raw generation outputs; the publication
-file set is now 61 files. Documentation/inventory updates do not change the
-43 copied files, configs or artifact bytes, or confer redistribution rights.
+file set grew to 61 files. The subsequent original SAMSum artifact addition
+makes 62 files. Neither step changes the 43 copied files, configs or frozen
+artifact bytes, or confers redistribution rights.
 The original Multi-News artifact's recorded path metadata remains unchanged;
 no credentials or model weights are added. The branch is not the final paper
 release, and the report does not replace the remaining availability review.

@@ -18,9 +18,10 @@
       "path": "assets/native_free_source6_population_matched_phase3c_candidate.pt",
       "sha256": "8a0a2b7cc1c450673938081d8f02604bbfe4b478926358be0c202add36d357e9",
       "bytes": 1919017,
-      "status": "not_bundled; server_size_and_sha256_match_reported; public_access_pending",
-      "public_download_url": null,
-      "size_provenance": "Observed in the maintainer-provided server report; the file was not transferred to this package."
+      "status": "present_original_bytes_sha256_verified_runtime_loader_passed",
+      "distribution": "included_in_repository_at_path",
+      "size_provenance": "Independently checked on the supplied original file and packaged copy; matches the prior server report.",
+      "metadata_note": "Two model-path fields retain the original server path. Limited metadata/common-credential-pattern review completed without rewriting; not comprehensive security or redistribution-rights clearance."
     },
     "checkpoint": {
       "directory": "checkpoints/samsum_t5_large_shallowdeep_kd_dyna",

@@ -45,7 +45,7 @@ do not advertise an unverified alternative as the same checkpoint.
 
 | Setting | Original file | Availability in this assembly |
 |---|---|---|
-| SAMSum | `native_free_source6_population_matched_phase3c_candidate.pt` | Verified on the server; not bundled; public access path pending |
+| SAMSum | [native_free_source6_population_matched_phase3c_candidate.pt](../assets/native_free_source6_population_matched_phase3c_candidate.pt) | Original bytes included; local hash/schema/runtime-loader checks passed |
 | Multi-News | [longt5_multinews_source3_phase3c_n128.pt](../assets/longt5_multinews_source3_phase3c_n128.pt) | Original bytes included in this server-validation branch |
 
 Required artifact hashes:
@@ -53,14 +53,17 @@ Required artifact hashes:
 - SAMSum: `8a0a2b7cc1c450673938081d8f02604bbfe4b478926358be0c202add36d357e9`
 - Multi-News: `d9cdb61aaf069b9fe76eef4fe546fdaaa3239f0f553af029b2b2e4d4797f7014`
 
-The server report confirms both hashes and records the SAMSum file size as
-1,919,017 bytes (about 1.92 MB). Server possession is not public availability.
+Both original files are included in this branch; no separate restoration
+artifact download is needed after cloning it. SAMSum is 1,919,017 bytes
+(about 1.92 MB), and Multi-News is 724,249 bytes. The supplied SAMSum original
+and packaged copy match the frozen server hash exactly. Do not refit,
+convert, resave or substitute a preliminary artifact.
 
-For the release, supply the genuine SAMSum file from the server, or a verified
-public download link to those same bytes. Do not refit, convert, resave or
-substitute a preliminary artifact. Review distribution permission and original
-embedded path metadata before publishing either artifact. No release URL is
-invented here. Code availability alone does not make a missing artifact available.
+These are fitted K/V restoration parameters used as inference inputs, not
+generated summaries, evaluation scores, datasets or full model weights.
+Their original server-path metadata remains embedded (two model-path fields
+in SAMSum). A limited SAMSum metadata scan found no tested credential-token
+or private-key patterns; final redistribution review remains separate.
 
 ## Tokenizers
 
@@ -92,20 +95,21 @@ cached identifier without downloading anything. See the
 
 ### Minimum remaining preparation work
 
-1. After permission and metadata review, provide the genuine SAMSum `.pt`
-   bytes at the named `assets/` path or through a verified public download.
-   At this size it does not require redistributing a multi-GB checkpoint.
-   Verify the original SHA-256 after transfer; do not load/save or refit it.
-2. Record a portable tokenizer preparation procedure from the accepted
+1. Record a portable tokenizer preparation procedure from the accepted
    cached inputs. A maintainer must verify both semantics (including
    `model_max_length`) and inventory with the existing identity helper in
    an isolated location before documenting a fresh-load recipe. Do not
    rewrite the expected digest or patch the model to conceal a mismatch.
-3. Retain the accepted server environment and cached resources. A clean
+2. Retain the accepted server environment and cached resources. A clean
    installation is a separate portability check, not a reason to rerun
    paper experiments or modify the validated environment.
 
-No new artifact download URL or fresh-tokenizer success is claimed here.
+3. Finish reader-facing checkpoint access and redistribution review. The
+   original model/data source links remain the acquisition route; do not
+   bundle large checkpoints or dataset text here.
+
+The restoration-artifact availability gap is closed; fresh-tokenizer
+preparation success and final release readiness are not claimed here.
 
 ## Default layout and verification
 
@@ -119,7 +123,7 @@ tokenizers/
   samsum/       # complete, verified tokenizer assets
   multinews/
 assets/
-  native_free_source6_population_matched_phase3c_candidate.pt  # pending
+  native_free_source6_population_matched_phase3c_candidate.pt
   longt5_multinews_source3_phase3c_n128.pt
 ```
 

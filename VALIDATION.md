@@ -38,7 +38,8 @@ or artifact bytes changed. Focused local checks passed:
   the real included Multi-News artifact through the original manager.
 - All 43 manifest source/dependency hashes and 42 Python AST checks.
 - Frozen checkpoint/artifact/tokenizer identities and method fields retained;
-  SAMSum remains absent locally with no invented public download URL.
+  at this documentation-only stage SAMSum was still absent locally, with no
+  invented public download URL. The subsequent intake is recorded below.
 - JSON and local Markdown links, scoped personal-path/credential checks,
   and `git diff --check`.
 - All six server-guide Bash command blocks are unchanged from the tested
@@ -47,6 +48,39 @@ or artifact bytes changed. Focused local checks passed:
 No GPU/model generation or download was performed during this documentation
 update. The previously recorded 141 runtime cases were not rerun for these
 documentation-only changes. Local focused evidence remains Git-ignored.
+
+## SAMSum artifact intake
+
+The user subsequently supplied the original SAMSum restoration parameter
+file. Its packaged copy is 1,919,017 bytes and byte-identical to the supplied
+file, with SHA-256
+`8a0a2b7cc1c450673938081d8f02604bbfe4b478926358be0c202add36d357e9`.
+No conversion, resaving, fitting, metadata edit or synthetic substitution
+was performed. Both supported restoration artifacts are now included.
+
+Local CPU checks passed:
+
+- Original `load_phase3c_policy_artifact` schema validation: schema 2, genuine
+  `fixed_layer` source 6, exact threshold 0.9 and geometry 24/1024/16/64.
+- Hidden and K maps cover exactly targets 7..23 (17 maps each); six V gap
+  bins cover all gaps 1..17. The 80 float32 tensors contain 468,992 elements
+  and are all finite. Target 6 retains the native same-layer projection.
+- Original `AdditionalArguments` / `update_autoconfig` and
+  `RuntimeKVRestorationManager.from_path` accept the public settings and both
+  real artifacts. SAMSum reports `fixed_shallow_layer`, source 6,
+  `fixed_layer_runtime` and compatible scopes without CALM or preliminary
+  overrides. Multi-News still reports the corresponding fixed-source-3 mode.
+- Four focused intake tests plus the existing 11 publication-packaging tests:
+  **15 passed**. Tests/helpers and XML evidence remain in ignored
+  `.validation/`; no new public validation framework is introduced.
+
+The limited string-metadata scan found two historical model-path fields and
+no tested GitHub/Hugging Face/AWS credential-token or private-key patterns.
+Paths are retained for frozen-byte identity and disclosed in
+[PROVENANCE.md](PROVENANCE.md); this is not comprehensive security or rights
+clearance. The source attachment was not edited. This `.pt` is an inference
+input, not an evaluation-results file. No checkpoint/data download, model
+construction, generation, GPU timing or new server run was performed.
 
 ## Environment and source identity
 
@@ -267,16 +301,14 @@ use this environment for the CUDA-targeted example runs.
 
 ## Remaining publication checks
 
-1. Supply the server-verified genuine SAMSum artifact or a verified public
-   link after distribution/metadata review. Do not refit or resave it.
-2. Finalize a reproducible tokenizer preparation recipe, especially for
+1. Finalize a reproducible tokenizer preparation recipe, especially for
    SAMSum. Its accepted cached identifier is verified; a newly prepared
    local directory is not. Keep the existing identity checks fail-closed.
-3. Confirm reader-facing checkpoint access and document environment limits.
+2. Confirm reader-facing checkpoint access and document environment limits.
    Existing server checkpoint hashes are verified; fresh public downloads
    and a fresh Linux/CUDA installation were not tested. Do not rebuild the
    working server environment or download large weights to the PC for this.
-4. Complete the rights/metadata review in `PROVENANCE.md` before a release
+3. Complete the rights/metadata review in `PROVENANCE.md` before a release
    tag or `main` promotion. No further model run is required for the bounded
    smoke task, and no original-checkout parity claim is made.
 

@@ -34,11 +34,12 @@ with actual restoration and no failures or fallback. See the
 [2026-09-16 server validation record](docs/SERVER_VALIDATION_2026-09-16.md).
 This is a bounded smoke result, not full paper reproduction or a speed claim.
 
-The original Multi-News restoration artifact is included in `assets/`. The
-SAMSum artifact was verified on the server but has not yet been supplied to
-this package and has no verified public download link. The server's cached
-SAMSum tokenizer matches the archived identity; fresh-environment preparation
-is still unverified. Redistribution/metadata review also remains open.
+Both original restoration parameter artifacts are included in `assets/`;
+their SHA-256 values match the server-validated identities. These small `.pt`
+files are inference inputs, not complete model checkpoints, datasets or
+generated result files. Checkpoints/data/tokenizers remain external assets.
+The server's cached SAMSum tokenizer matches the archived identity;
+fresh-environment preparation and the final redistribution review remain open.
 **The two-setting release is not yet ready to advertise as fully runnable.**
 
 ## 1. Environment

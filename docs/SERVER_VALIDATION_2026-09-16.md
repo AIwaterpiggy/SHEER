@@ -101,7 +101,11 @@ sizes/hashes recorded in [ASSET_MANIFEST.json](../assets/ASSET_MANIFEST.json),
 except that the SAMSum artifact size was newly observed as 1,919,017 bytes
 and is now recorded there. Its already-frozen hash was unchanged:
 `8a0a2b7cc1c450673938081d8f02604bbfe4b478926358be0c202add36d357e9`.
-The original artifact remains absent from this public assembly.
+The original artifact was not bundled at the time of this server report.
+It has since been supplied and included byte-for-byte; see the later
+[local intake checks](../VALIDATION.md#samsum-artifact-intake) and
+[current asset availability](ASSETS.md#restoration-artifacts). This does not
+change the tested commit or imply another server generation run.
 
 | Tokenizer setting | Accepted input | Full identity SHA-256 |
 |---|---|---|
@@ -153,10 +157,11 @@ to those raw files.
 
 There is no reported blocker to these two bounded server runs and no further
 model experiment is needed for this smoke task. Before advertising a complete
-public two-setting release, still provide the genuine SAMSum artifact or a
-verified public link, finalize reproducible tokenizer preparation, and finish
-checkpoint-access and redistribution/metadata review. Do not infer that
-private server availability is public reader access.
+public two-setting release, finalize reproducible tokenizer preparation and
+finish checkpoint-access and redistribution/metadata review. The SAMSum
+artifact provision was a gate at report time and is now addressed by the
+later original-file addition linked above. This does not establish access
+to the separate checkpoints, tokenizer resources or private run outputs.
 
 No full paper reproduction, paper-quality ROUGE, extraction-vs-original
 output parity, performance/speedup, fresh Linux/CUDA installation or final
